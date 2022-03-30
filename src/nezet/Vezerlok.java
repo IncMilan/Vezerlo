@@ -441,10 +441,10 @@ public class Vezerlok extends javax.swing.JFrame {
     }//GEN-LAST:event_txtujSzakActionPerformed
 
     private void KilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KilepesActionPerformed
-        ImageIcon icon = new ImageIcon("exit.jpg");
+        ImageIcon icon = new ImageIcon(this.getClass().getResource("exit.jpg"));
         String msg = "Biztosan ki akarsz lépni?";
         Kilepes.addActionListener((ActionEvent e) -> {
-        JOptionPane.showMessageDialog(null,JOptionPane.YES_NO_OPTION + msg + "exit.jpg");
+        JOptionPane.showMessageDialog(null,JOptionPane.YES_NO_OPTION + msg + icon);
             dispose();
             
             

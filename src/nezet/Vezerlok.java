@@ -8,6 +8,7 @@ package nezet;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 
@@ -69,7 +70,7 @@ public class Vezerlok extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        Kilepes = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -321,8 +322,13 @@ public class Vezerlok extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
         jMenu1.add(jSeparator1);
 
-        jMenuItem3.setText("Kilépés");
-        jMenu1.add(jMenuItem3);
+        Kilepes.setText("Kilépés");
+        Kilepes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KilepesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Kilepes);
 
         jMenuBar1.add(jMenu1);
 
@@ -434,6 +440,17 @@ public class Vezerlok extends javax.swing.JFrame {
 
     }//GEN-LAST:event_txtujSzakActionPerformed
 
+    private void KilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KilepesActionPerformed
+        ImageIcon icon = new ImageIcon("exit.jpg");
+        String msg = "Biztosan ki akarsz lépni?";
+        Kilepes.addActionListener((ActionEvent e) -> {
+        JOptionPane.showMessageDialog(null,JOptionPane.YES_NO_OPTION + msg + "exit.jpg");
+            dispose();
+            
+            
+        });
+    }//GEN-LAST:event_KilepesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -470,6 +487,7 @@ public class Vezerlok extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Kilepes;
     private javax.swing.JButton btnComboba;
     private javax.swing.JButton btnJelszotMutat;
     private javax.swing.JButton btnListbe;
@@ -491,7 +509,6 @@ public class Vezerlok extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;

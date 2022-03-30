@@ -427,14 +427,9 @@ public class Vezerlok extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void txtujSzakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtujSzakActionPerformed
-     txtujSzak.addActionListener(new ActionListener() {
-
-        
-       
-         @Override
-     public void actionPerformed(ActionEvent e) {
-     jComboBox1.addItem(txtujSzak.getText());
-    }
+     txtujSzak.addActionListener((ActionEvent e) -> {
+         jComboBox1.addItem(txtujSzak.getText());
+         txtujSzak.setText(" ");
      });
 
     }//GEN-LAST:event_txtujSzakActionPerformed
